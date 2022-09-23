@@ -1,0 +1,22 @@
+// mixin
+@import url(../Helpers/_variable.scss);
+@mixin text($fz, $fw, $color) {
+    font-size: $fz;
+    font-weight: $fw;
+    color: $color;
+}
+
+@mixin button($fz, $fw, $color, $bg, $pd, $bd, $br , $c-hover, $bg-hover) {
+    font-size: $fz;
+    font-weight: $fw;
+    color: $color;
+    background-color: $bg;
+    padding: $pd;
+    border: $bd ;
+    border-radius: $br ;
+
+    &:hover {
+        color: $c-hover;
+        background-color: $bg-hover;
+    }
+}
