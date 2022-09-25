@@ -14,6 +14,7 @@ a {
   width: 100%;
   position: absolute;
   background: transparent;
+  transition: all 1s;
 }
 .header .navbar {
   padding: 0;
@@ -24,8 +25,16 @@ a {
     margin: 0 20px !important;
   }
 }
+.header .navbar .container .navbar-toggler {
+  font-size: 12px;
+}
 .header .navbar .container .navbar-brand img {
   width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .header .navbar .container .navbar-brand img {
+    width: 80%;
+  }
 }
 .header .navbar .container .header-content .offcanvas-body {
   justify-content: flex-end;
@@ -101,7 +110,22 @@ a {
   background-position: top;
   background-size: contain;
   position: relative;
-  height: 700px;
+  height: 800px;
+}
+@media screen and (max-width: 992px) {
+  .carousel {
+    height: 1000px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel {
+    height: 900px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .carousel {
+    height: 700px;
+  }
 }
 .carousel::after {
   position: absolute;
@@ -116,32 +140,76 @@ a {
   left: 0;
   right: 0;
 }
-.carousel .container {
+.carousel .container .row {
   align-items: center;
   padding-top: 80px;
 }
-.carousel .container .carousel-left {
+.carousel .container .row .carousel-left {
   color: black;
 }
-.carousel .container .carousel-left h5 {
+.carousel .container .row .carousel-left h5 {
   font-size: 1.1rem;
   margin-bottom: 0.5em;
   color: #b61984;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.carousel .container .carousel-left h1 {
+@media screen and (max-width: 992px) {
+  .carousel .container .row .carousel-left h5 {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+}
+.carousel .container .row .carousel-left h1 {
   font-size: 57px;
   font-weight: 700;
 }
-.carousel .container .carousel-right img {
+@media screen and (max-width: 992px) {
+  .carousel .container .row .carousel-left h1 {
+    font-size: 47px;
+  }
+}
+.carousel .container .row .carousel-right img {
   width: 100%;
 }
 
 .Products {
   background: #dcd1f0;
-  max-height: 1000px;
+  height: 1000px;
   position: relative;
+}
+@media screen and (max-width: 1200px) {
+  .Products {
+    height: 800px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .Products {
+    height: 1700px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Products {
+    height: 1600px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .Products {
+    height: 4000px;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Products {
+    height: 3400px;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .Products {
+    height: 3200px;
+    padding: 20px;
+  }
 }
 .Products::after {
   position: absolute;
@@ -162,6 +230,12 @@ a {
   z-index: 99;
   margin-bottom: 10px;
   padding: 20px;
+}
+@media screen and (max-width: 576px) {
+  .Products .container .list .item {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
 }
 .Products .container .list .item .content {
   overflow: hidden;
@@ -202,6 +276,16 @@ a {
   background: #ffffff;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .Contacts {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .Contacts {
+    width: 100%;
+  }
+}
 .Contacts::after {
   position: absolute;
   content: "";
@@ -218,18 +302,79 @@ a {
 .Contacts .container .Contacts-content {
   padding: 100px 0px 10px 0px;
 }
+@media screen and (max-width: 576px) {
+  .Contacts .container .Contacts-content {
+    padding: 0;
+  }
+}
 .Contacts .container .Contacts-content .Contacts-left {
   padding: 20px 10px 20px 80px;
   z-index: 99;
 }
+@media screen and (max-width: 992px) {
+  .Contacts .container .Contacts-content .Contacts-left {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Contacts .container .Contacts-content .Contacts-left {
+    padding: 0;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .Contacts .container .Contacts-content .Contacts-left {
+    padding: 0;
+  }
+}
 .Contacts .container .Contacts-content .Contacts-left img {
   width: 90%;
+}
+@media screen and (max-width: 992px) {
+  .Contacts .container .Contacts-content .Contacts-left img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Contacts .container .Contacts-content .Contacts-left img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .Contacts .container .Contacts-content .Contacts-left img {
+    width: 100%;
+  }
 }
 .Contacts .container .Contacts-content .Contacts-right {
   z-index: 99;
 }
+@media screen and (max-width: 768px) {
+  .Contacts .container .Contacts-content .Contacts-right {
+    margin-top: 20px;
+  }
+}
 .Contacts .container .Contacts-content .Contacts-right .Contacts-form {
   width: 60%;
+}
+@media screen and (max-width: 1200px) {
+  .Contacts .container .Contacts-content .Contacts-right .Contacts-form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .Contacts .container .Contacts-content .Contacts-right .Contacts-form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Contacts .container .Contacts-content .Contacts-right .Contacts-form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .Contacts .container .Contacts-content .Contacts-right .Contacts-form {
+    width: 100%;
+  }
 }
 .Contacts .container .Contacts-content .Contacts-right .Contacts-form form {
   padding: 20px;
@@ -311,8 +456,34 @@ a {
   background-size: cover;
   background-position: center;
 }
+@media screen and (max-width: 992px) {
+  .footer {
+    height: 700px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer {
+    height: 1200px;
+  }
+}
 .footer .container {
   padding-top: 100px;
+}
+@media screen and (max-width: 768px) {
+  .footer .container .footer-content .item {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer .container .footer-content .item {
+    margin-top: 30px;
+    padding: 0px 50px;
+  }
 }
 .footer .container .footer-content .item h1 {
   color: white;
@@ -341,12 +512,16 @@ a {
   margin-top: 15px;
 }
 .footer .container .footer-content .item ul li a {
-  border-bottom: 1px solid gray;
   color: white;
   padding: 5px 0px;
   display: block;
   font-size: 13.5px;
-  width: 20%;
+  width: 30%;
+}
+@media screen and (max-width: 576px) {
+  .footer .container .footer-content .item .footer-button {
+    margin: auto;
+  }
 }
 .footer .container .footer-content .item .footer-button button {
   display: block;
@@ -362,6 +537,11 @@ a {
   transition: all 0.5s;
   margin-top: 50px;
 }
+@media screen and (max-width: 576px) {
+  .footer .container .footer-content .item .footer-button button:first-child {
+    padding: 15px 80px;
+  }
+}
 .footer .container .footer-content .item .footer-button button:first-child:focus {
   border: 1px solid white;
 }
@@ -375,6 +555,11 @@ a {
   font-size: 14px;
   transition: all 0.5s;
   margin-top: 30px;
+}
+@media screen and (max-width: 576px) {
+  .footer .container .footer-content .item .footer-button button:last-child {
+    padding: 15px 80px;
+  }
 }
 .footer .container .footer-content .item .footer-button button:last-child:hover {
   background: transparent;

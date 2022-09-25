@@ -26,17 +26,20 @@ $fw-regular: 400;
 $fw-semibold: 600;
 $fw-bold: 700;
 
-ul{
+ul {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none !important;
 }
+
 .header {
     height: 80px;
     width: 100%;
     position: absolute;
     background: transparent;
+    transition: all 1s;
 
     .navbar {
         padding: 0;
@@ -45,13 +48,13 @@ a{
             @media screen and (max-width:1200px) {
                 justify-content: flex-start !important;
                 margin: 0 20px !important;
-
             }
 
             // justify-content:space-around;
 
             //Bar
             .navbar-toggler {
+                font-size: 12px;
 
                 .navbar-toggler-icon {}
             }
@@ -60,6 +63,10 @@ a{
             .navbar-brand {
                 img {
                     width: 100%;
+
+                    @media screen and (max-width:992px) {
+                        width: 80%;
+                    }
                 }
             }
 
@@ -172,7 +179,19 @@ a{
     background-position: top;
     background-size: contain;
     position: relative;
-    height: 700px;
+    height: 800px;
+
+    @media screen and (max-width:992px) {
+        height: 1000px;
+    }
+
+    @media screen and (max-width:768px) {
+        height: 900px;
+    }
+
+    @media screen and (max-width:576px) {
+        height: 700px;
+    }
 
     &::after {
         position: absolute;
@@ -190,31 +209,40 @@ a{
     }
 
     .container {
-        align-items: center;
-        padding-top: 80px;
+        .row{
+            align-items: center;
+            padding-top: 80px;
+            .carousel-left {
 
-        .carousel-left {
-
-            color: black;
-
-            h5 {
-                font-size: 1.1rem;
-                margin-bottom: 0.5em;
-                color: #b61984;
-                text-transform: uppercase;
-                letter-spacing: 2px;
+                color: black;
+    
+                h5 {
+                    font-size: 1.1rem;
+                    margin-bottom: 0.5em;
+                    color: #b61984;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+    
+                    @media screen and (max-width:992px) {
+                        font-size: 15px;
+                        margin-top: 20px;
+                    }
+                }
+    
+                h1 {
+                    font-size: 57px;
+                    font-weight: 700;
+    
+                    @media screen and (max-width:992px) {
+                        font-size: 47px;
+                    }
+                }
             }
-
-            h1 {
-                font-size: 57px;
-                font-weight: 700;
-
-            }
-        }
-
-        .carousel-right {
-            img {
-                width: 100%;
+    
+            .carousel-right {
+                img {
+                    width: 100%;
+                }
             }
         }
     }
@@ -223,8 +251,35 @@ a{
 // Products
 .Products {
     background: #dcd1f0;
-    max-height: 1000px;
+    height: 1000px;
     position: relative;
+
+    @media screen and (max-width:1200px) {
+        height: 800px;
+    }
+
+    @media screen and (max-width:992px) {
+        height: 1700px;
+    }
+
+    @media screen and (max-width:768px) {
+        height: 1600px;
+    }
+
+    @media screen and (max-width:576px) {
+        height: 4000px;
+        padding: 20px;
+    }
+
+    @media screen and (max-width:500px) {
+        height: 3400px;
+        padding: 20px;
+    }
+
+    @media screen and (max-width:400px) {
+        height: 3200px;
+        padding: 20px;
+    }
 
     &::after {
         position: absolute;
@@ -238,6 +293,7 @@ a{
         background-repeat: no-repeat;
         background-size: contain;
 
+
     }
 
     .container {
@@ -250,6 +306,11 @@ a{
                 z-index: 99;
                 margin-bottom: 10px;
                 padding: 20px;
+
+                @media screen and (max-width:576px) {
+                    padding-top: 0;
+                    margin-bottom: 0;
+                }
 
                 .content {
                     overflow: hidden;
@@ -300,10 +361,17 @@ a{
 }
 
 // Contacts
-
 .Contacts {
     background: #ffffff;
     position: relative;
+
+    @media screen and (max-width:768px) {
+        margin-top: 70px;
+    }
+
+    @media screen and (max-width:576px) {
+        width: 100%;
+    }
 
     &::after {
         position: absolute;
@@ -314,29 +382,79 @@ a{
         left: 0;
         right: 0;
         background-repeat: no-repeat;
-        background-size:contain;
+        background-size: contain;
         width: 100%;
         height: 600px;
     }
 
     .container {
+
         .Contacts-content {
             padding: 100px 0px 10px 0px;
+
+            @media screen and (max-width:576px) {
+                padding: 0;
+            }
 
             .Contacts-left {
                 padding: 20px 10px 20px 80px;
                 z-index: 99;
 
+                @media screen and (max-width:992px) {
+                    padding: 0;
+                }
+
+                @media screen and (max-width:768px) {
+                    padding: 0;
+                    margin-top: 30px;
+                }
+
+                @media screen and (max-width:576px) {
+                    padding: 0;
+                }
+
                 img {
                     width: 90%;
+
+                    @media screen and (max-width:992px) {
+                        width: 100%;
+                    }
+
+                    @media screen and (max-width:768px) {
+                        width: 100%;
+                    }
+
+                    @media screen and (max-width:576px) {
+                        width: 100%;
+                    }
                 }
             }
 
             .Contacts-right {
                 z-index: 99;
 
+                @media screen and (max-width:768px) {
+                    margin-top: 20px;
+                }
+
                 .Contacts-form {
                     width: 60%;
+
+                    @media screen and (max-width:1200px) {
+                        width: 100%;
+                    }
+
+                    @media screen and (max-width:992px) {
+                        width: 100%;
+                    }
+
+                    @media screen and (max-width:768px) {
+                        width: 100%;
+                    }
+
+                    @media screen and (max-width:576px) {
+                        width: 100%;
+                    }
 
                     form {
 
@@ -437,90 +555,139 @@ a{
 // Footer
 .footer {
     background: url(../img/footer_background.jpg);
-   height:550px;
-    width:100%;
+    height: 550px;
+    width: 100%;
     background-repeat: no-repeat;
-    background-size:cover;
-//    transform:translateY(-100px);
-   background-position: center;
+    background-size: cover;
+    //    transform:translateY(-100px);
+    background-position: center;
+
+    @media screen and (max-width:992px) {
+        height:700px;
+    }
+
+    @media screen and (max-width:768px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width:576px) {
+        height: 1200px;
+    }
+
     .container {
-        padding-top:100px ;
+        padding-top: 100px;
+
         .footer-content {
             .item {
+                @media screen and (max-width:768px) {
+                    margin-top: 30px;
+                }
+            
+                @media screen and (max-width:576px) {
+                    margin-top: 30px;
+                    padding: 0px 50px;
+                }
                 h1 {
-                    color:white;
+                    color: white;
                     font-size: 24px;
                 }
 
                 .item-contact {
                     margin-top: 15px;
+
                     i {
-                        color:white;
+                        color: white;
                     }
 
                     span {
                         margin-left: 10px;
                         font-size: 14px;
-                        color:white;
+                        color: white;
                     }
                 }
-                .item-social{
-                    
-                    i{
-                        color:white;
+
+                .item-social {
+
+                    i {
+                        color: white;
                         margin-right: 10px;
                     }
                 }
+
                 ul {
-                    padding:0;
+                    padding: 0;
+
                     li {
-                        
-                        display:block;
+
+                        display: block;
                         margin-top: 15px;
+                        // position: relative;
+                        // &::before{
+                        //     position: absolute;
+                        //     content: " ";
+                        //     width:20px;
+                        //     height:20px;
+                        //     color:red;
+                        //     bottom:0;
+                        //     left:0;
+                        //     display:block;
+                        // }
                         a {
-                            border-bottom: 1px solid gray;
-                            color:white;
-                            padding:5px 0px;
-                            display:block;
-                             font-size: 13.5px;
-                             width:20%;
+                            color: white;
+                            padding: 5px 0px;
+                            display: block;
+                            font-size: 13.5px;
+                            width: 30%;
+                           
                         }
                     }
                 }
 
                 .footer-button {
+                    @media screen and (max-width:576px) {
+                        margin:auto;
+                    }
                     button {
-                        display:block;
+                        display: block;
                        
-                        &:first-child{
+                        &:first-child {
                             display: block;
                             color: white;
-                            background:transparent;
+                            background: transparent;
                             padding: 15px 100px;
                             border: 1px solid gray;
                             border-radius: 40px;
                             font-size: 14px;
                             transition: all 0.5s;
                             margin-top: 50px;
-                            &:focus{
+                            @media screen and (max-width:576px) {
+                                padding:15px 80px;
+                                // margin:30px auto;
+                            }
+                            &:focus {
                                 border: 1px solid white;
                             }
                         }
-                        &:last-child{
+
+                        &:last-child {
                             display: block;
-                                color:black;
-                                background:white;
-                                padding: 15px 100px;
-                                border: 1px solid white;
-                                border-radius: 40px;
-                                font-size: 14px;
-                                transition: all 0.5s;
-                                margin-top: 30px;
-                                &:hover {
-                                    background:transparent;
-                                    color:black;
-                                    box-shadow: 0 0 0 1px #b61984 inset;
-                                }
+                            color: black;
+                            background: white;
+                            padding: 15px 100px;
+                            border: 1px solid white;
+                            border-radius: 40px;
+                            font-size: 14px;
+                            transition: all 0.5s;
+                            margin-top: 30px;
+                            @media screen and (max-width:576px) {
+                                padding:15px 80px;
+                                // margin:30px auto;
+                            }
+                            &:hover {
+                                background: transparent;
+                                color: black;
+                                box-shadow: 0 0 0 1px #b61984 inset;
+                            }
                         }
                     }
                 }
