@@ -27,6 +27,12 @@ a {
 }
 .header .navbar .container .navbar-toggler {
   font-size: 12px;
+  border: none;
+}
+@media screen and (max-width: 992px) {
+  .header .navbar .container .navbar-toggler {
+    font-size: 15px;
+  }
 }
 .header .navbar .container .navbar-brand img {
   width: 100%;
@@ -88,6 +94,7 @@ a {
   border-radius: 40px;
   font-size: 14px;
   transition: all 0.5s;
+  box-shadow: 0 0 0 3em #b61984 inset;
 }
 .header .navbar .container .header-content .offcanvas-body .contact .contact-btn button i {
   margin-right: 5px;
@@ -104,6 +111,53 @@ a {
 .header .navbar .container .header-content .offcanvas-body .contact .contact-social i:hover {
   color: #b61984;
 }
+.header .navbar .container .offcanvas {
+  width: 80%;
+}
+.header .navbar .container .offcanvas .offcanvas-main ul li {
+  margin-top: 20px;
+}
+.header .navbar .container .offcanvas .offcanvas-main ul li a {
+  font-size: 13px;
+  text-decoration: none !important;
+}
+.header .navbar .container .offcanvas .offcanvas-main ul li a:first-child {
+  font-weight: 600;
+  font-size: 15px;
+  color: black;
+}
+.header .navbar .container .offcanvas .offcanvas-main .contact-btn {
+  margin-top: 100px;
+}
+.header .navbar .container .offcanvas .offcanvas-main .contact-btn button {
+  color: white;
+  background: #b61984;
+  padding: 12px 20px;
+  border: 1px solid #b61984;
+  border-radius: 40px;
+  font-size: 14px;
+  transition: all 0.5s;
+  box-shadow: 0 0 0 3em #b61984 inset;
+}
+.header .navbar .container .offcanvas .offcanvas-main .contact-btn button i {
+  margin-right: 5px;
+}
+.header .navbar .container .offcanvas .offcanvas-main .contact-btn button:hover {
+  background: white;
+  color: #b61984;
+  box-shadow: 0 0 0 1px #b61984 inset;
+}
+.header .navbar .container .offcanvas .offcanvas-main .contact-btn div {
+  margin-top: 10px;
+}
+.header .navbar .container .offcanvas .offcanvas-main .contact-btn div i {
+  margin-right: 10px;
+  font-size: 12px;
+}
+.header .navbar .container .offcanvas .offcanvas-main .contact-btn div i:hover {
+  color: #b61984;
+}
+
 .carousel {
   background: url(../img/yellow_top_wave_01.png);
   background-repeat: no-repeat;
@@ -441,6 +495,7 @@ a {
   border-radius: 40px;
   font-size: 14px;
   transition: all 0.5s;
+  box-shadow: 0 0 0 3em #b61984 inset;
 }
 .Contacts .container .Contacts-content .Contacts-right .Contacts-form form .button-contact button:hover {
   background: white;
@@ -517,6 +572,10 @@ a {
   display: block;
   font-size: 13.5px;
   width: 30%;
+  border-bottom: 1px solid gray;
+}
+.footer .container .footer-content .item ul li a:hover {
+  opacity: 0.5;
 }
 @media screen and (max-width: 576px) {
   .footer .container .footer-content .item .footer-button {
@@ -555,6 +614,7 @@ a {
   font-size: 14px;
   transition: all 0.5s;
   margin-top: 30px;
+  box-shadow: 0 0 0 3em #fff inset;
 }
 @media screen and (max-width: 576px) {
   .footer .container .footer-content .item .footer-button button:last-child {
@@ -564,5 +624,5 @@ a {
 .footer .container .footer-content .item .footer-button button:last-child:hover {
   background: transparent;
   color: black;
-  box-shadow: 0 0 0 1px #b61984 inset;
+  box-shadow: 0 0 0 1px #fff inset;
 }

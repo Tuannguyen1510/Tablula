@@ -55,6 +55,10 @@ a {
             //Bar
             .navbar-toggler {
                 font-size: 12px;
+                border:none;
+                @media screen and (max-width:992px) {
+                   font-size: 15px;
+                }
 
                 .navbar-toggler-icon {}
             }
@@ -132,6 +136,7 @@ a {
                                 border-radius: 40px;
                                 font-size: 14px;
                                 transition: all 0.5s;
+                                box-shadow: 0 0 0 3em #b61984 inset;
 
                                 &:hover {
                                     background: white;
@@ -160,13 +165,70 @@ a {
 
             //Content Bar
             .offcanvas {
+                width: 80%;
                 .offcanvas-header {
+                    // width:100%;
                     img {}
-
-                    button {}
+                    button {
+                      
+                    }
                 }
 
-                .offcanvas-main {}
+                .offcanvas-main {
+                    // width: 80%;
+                   
+                    ul {
+                        li {
+                            margin-top: 20px;
+
+                            a {
+                                font-size: 13px;
+                                text-decoration: none !important;
+                                &:first-child{
+                                    font-weight: 600;
+                                    font-size: 15px;
+                                    color:black;
+                                }
+                            }
+                        }
+                    }
+
+                    .contact-btn {
+                        margin-top: 100px;
+                        button {
+                            i {
+                                margin-right: 5px;
+                            }
+
+                            color: white;
+                            background: #b61984;
+                            padding: 12px 20px;
+                            border: 1px solid #b61984;
+                            border-radius: 40px;
+                            font-size: 14px;
+                            transition: all 0.5s;
+                            box-shadow: 0 0 0 3em #b61984 inset;
+
+                            &:hover {
+                                background: white;
+                                color: #b61984;
+                                box-shadow: 0 0 0 1px #b61984 inset;
+                            }
+                        }
+
+                        div {
+                            margin-top: 10px;
+                            i {
+                                margin-right: 10px;
+                                font-size: 12px;
+
+                                &:hover {
+                                    color: #b61984;
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
         }
@@ -209,36 +271,37 @@ a {
     }
 
     .container {
-        .row{
+        .row {
             align-items: center;
             padding-top: 80px;
+
             .carousel-left {
 
                 color: black;
-    
+
                 h5 {
                     font-size: 1.1rem;
                     margin-bottom: 0.5em;
                     color: #b61984;
                     text-transform: uppercase;
                     letter-spacing: 2px;
-    
+
                     @media screen and (max-width:992px) {
                         font-size: 15px;
                         margin-top: 20px;
                     }
                 }
-    
+
                 h1 {
                     font-size: 57px;
                     font-weight: 700;
-    
+
                     @media screen and (max-width:992px) {
                         font-size: 47px;
                     }
                 }
             }
-    
+
             .carousel-right {
                 img {
                     width: 100%;
@@ -536,6 +599,7 @@ a {
                                 border-radius: 40px;
                                 font-size: 14px;
                                 transition: all 0.5s;
+                                box-shadow: 0 0 0 3em #b61984 inset;
 
                                 &:hover {
                                     background: white;
@@ -563,7 +627,7 @@ a {
     background-position: center;
 
     @media screen and (max-width:992px) {
-        height:700px;
+        height: 700px;
     }
 
     @media screen and (max-width:768px) {
@@ -582,11 +646,12 @@ a {
                 @media screen and (max-width:768px) {
                     margin-top: 30px;
                 }
-            
+
                 @media screen and (max-width:576px) {
                     margin-top: 30px;
                     padding: 0px 50px;
                 }
+
                 h1 {
                     color: white;
                     font-size: 24px;
@@ -621,6 +686,7 @@ a {
 
                         display: block;
                         margin-top: 15px;
+
                         // position: relative;
                         // &::before{
                         //     position: absolute;
@@ -638,18 +704,24 @@ a {
                             display: block;
                             font-size: 13.5px;
                             width: 30%;
-                           
+                            border-bottom: 1px solid gray;
+                            // width:80%;
+                            &:hover{
+                                opacity: 0.5;
+                            }
+
                         }
                     }
                 }
 
                 .footer-button {
                     @media screen and (max-width:576px) {
-                        margin:auto;
+                        margin: auto;
                     }
+
                     button {
                         display: block;
-                       
+
                         &:first-child {
                             display: block;
                             color: white;
@@ -660,10 +732,12 @@ a {
                             font-size: 14px;
                             transition: all 0.5s;
                             margin-top: 50px;
+
                             @media screen and (max-width:576px) {
-                                padding:15px 80px;
+                                padding: 15px 80px;
                                 // margin:30px auto;
                             }
+
                             &:focus {
                                 border: 1px solid white;
                             }
@@ -679,14 +753,17 @@ a {
                             font-size: 14px;
                             transition: all 0.5s;
                             margin-top: 30px;
+                            box-shadow: 0 0 0 3em #fff inset;
+
                             @media screen and (max-width:576px) {
-                                padding:15px 80px;
+                                padding: 15px 80px;
                                 // margin:30px auto;
                             }
+
                             &:hover {
                                 background: transparent;
                                 color: black;
-                                box-shadow: 0 0 0 1px #b61984 inset;
+                                box-shadow: 0 0 0 1px #fff inset;
                             }
                         }
                     }
